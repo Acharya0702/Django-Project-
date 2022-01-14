@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/authentication/signup.css">
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade = show" role="alert">
+        <strong>Message: </strong>{{message}}
+        <button type= "button" class="close" data-dismiss="alert" area-lebel = "close">
+        <span area-hidden = "true">&times;</span></button>
+    </div>
+    {% endfor %}
+    <h1>SignUp</h1>
+    <form action="/signup" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <label for="">username:</label>
+        </div>
+        <div class="col">
+            <input type="text" id="username" name="username" placeholder="Enter your User_Name:" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">First_Name:</label>
+        </div>
+        <div class="col">
+            <input type="text" id="fname" name="fname" placeholder="Enter your First_Name:" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">Last_Name:</label>
+        </div>
+        <div class="col">
+            <input type="text" id="lname" name="lname" placeholder="Enter your Last_Name:" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">Email:</label>
+        </div>
+        <div class="col">
+            <input type="text" id="email" name="email" placeholder="Enter your Email address:" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">Password:</label>
+        </div>
+        <div class="col">
+            <input type="password" id="pass1" name="pass1" placeholder="Enter your Password:" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">Confirm_Password:</label>
+        </div>
+        <div class="col">
+            <input type="password" id="pass2" name="pass2" placeholder="Confirm your Password:" required><br>
+        </div>
+    </div>
+    <div class="btn">
+        <button type="submit" class="bt">SignUp</button>
+    </div>
+    </form>
+    <p><i>If you have already SignedUp please Click on SignIn Button given below.</i></p>
+    <div class="btn2">
+        <a href="/signin"><button type="submit" class="bt2">SignIn</button></a>
+        <a href="/"><button type="submit" class="bt3">Home</button></a>
+    </div>
+</body>
+</html>

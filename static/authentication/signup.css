@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(58, 58, 117);
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    padding: 20px;
+}
+.row{
+    text-align: center;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 10px;
+    color: red;
+    font-weight: bolder;
+}
+.btn{
+    height: auto;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+.bt{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.btn2{
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+.bt2{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.bt3{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+p{
+    color: rgb(44, 165, 44);
+    font-weight: bold;
+}

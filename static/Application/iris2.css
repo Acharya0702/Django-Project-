@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(95, 0, 119);
+    padding: 20px;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    background-color: goldenrod;
+}
+h3{
+    color: aliceblue;
+}
+.row{
+    text-align: center;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 10px;
+    color: red;
+    font-weight: bolder;
+}
+.btn{
+    height: auto;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+.bt{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.bt36{
+    background-color: black;
+    color: blue;
+}
+h5{
+    float: right;
+}

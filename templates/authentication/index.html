@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>authentication</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/authentication/index.css">
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade = show" role="alert">
+        <strong>Message: </strong>{{message}}
+        <button type= "button" class="close" data-dismiss="alert" area-lebel = "close">
+        <span area-hidden = "true">&times;</span></button>
+    </div>
+    {% endfor %}
+    <h1>Machine-Learning</h1>
+    <pre>
+        This website represents several Machine-Learning models and how they are worked.
+        There are several datasets which are collected from <b>Kaggle</b> and Using Supervised Machine-Learning algorithms we have 
+        analyzed all the datasets and create models having higher accuracy.
+    </pre>
+    <h5>There are 2 types of Projects in Machine Learning under supervised Learning: <br> (i) Classification <br> (ii) Regression</h5>
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn"><a href="signup">signup</a></button>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn"><a href="signin">signin</a></button>
+        </div>
+    </div>
+    <b><p>PLease SignUp Here if You are first time visiting this web site. If you already SignedUp then click on SignIn and Proceed.</p></b>
+</body>
+<footer>All rights are Reserved.</footer>
+</html>

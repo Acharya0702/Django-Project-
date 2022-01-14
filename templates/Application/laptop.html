@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/Application/laptop2.css">
+</head>
+<body>
+    <h1>Laptop Price Prediction-Project</h1>
+    <form action = "/application/laptop" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+          <h5>Enter the company: </h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f1" placeholder="company"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the products:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f2" placeholder="product"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the type:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f3" placeholder="Type"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Inches:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f4" placeholder="Inches"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the ScreenResolution:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f5" placeholder="ScreenResolution"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Cpu:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f6" placeholder="Cpu"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Ram:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f7" placeholder="Ram"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Memory:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f8" placeholder="Memory"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Gpu:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f9" placeholder="Gpu"
+        style="background-color: black; 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the OpSys:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f10" placeholder="OpSys"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Weight:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f11" placeholder="Weight"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the HDD:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f12" placeholder="HDD"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the SSD:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f13" placeholder="SSD"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Hybrid:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f14" placeholder="Hybrid"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Flash_Storage:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f15" placeholder="Flash_Storage"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the X_res:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f16" placeholder="X_res"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Y_res:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f17" placeholder="Y_res"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the PPI:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f18" placeholder="PPI"
+        style="background-color: rgb(30, 9, 87); 
+        color: chartreuse; width: 500px; height: 30px;">
+        </div>
+      </div>
+      <div class="bt">
+        <input type="submit" class="btn" value="predict">
+      </div>
+    </form>
+    <div class="card text-center" style="width:21.5em;margin:0 auto;">
+        <div class="card-body">
+          <p class="card text">
+          <h1>{{prediction}}</h1>
+          </p>
+        </div>
+        </div>
+    <h3><marquee class = "marque" behavior="scroll" direction="left" scrollamount=10>This is the Page where you will able to know what should be the price of your desired laptop.</marquee></h3>
+    <a href="/application"><button class="bt36" type="submit">Go Back</button></a>
+</body>
+</html>

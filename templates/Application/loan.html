@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/Application/loan.css">
+</head>
+<body>
+    <h1>Loan Prediction-Project</h1>
+    <form action = "/application/loan" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+          <h5>Enter the Gender: </h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f1" placeholder="Gender">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Maretial status:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f2" placeholder="Married">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the no of dependents:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f3" placeholder="Dependents">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Self_Employed status:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f4" placeholder="Self_Employed">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Total Income:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f5" placeholder="Total Income">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Loan amount:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f6" placeholder="Loan Amount">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Loan amount term:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f7" placeholder="Loan Amount Term">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Credit History:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f8" placeholder="Credit History">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Property Area:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f9" placeholder="Property Area">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Enter the Education:</h5>
+        </div>
+        <div class="col">
+          <input type="text" name="f10" placeholder="Education">
+        </div>
+      </div><br>
+        <input type="submit" class="btn" value="predict">
+    </form>
+    <div class="card text-center" style="width:21.5em;margin:0 auto;">
+        <div class="card-body">
+          <p class="card text">
+          <h1>{{prediction}}</h1>
+          </p>
+        </div>
+        </div>
+    <h3><marquee class = "marque" behavior="scroll" direction="left" scrollamount=10>This is the Page where you will able to know the person is eligible to get loan or not.</marquee></h3>
+    <a href="/application"><button class="bt36" type="submit">Go Back</button></a>
+</body>
+</html>

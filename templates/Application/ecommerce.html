@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/Application/ecommerce.css">
+</head>
+<body>
+    <h1>E-commerce Prediction-Project</h1>
+    <form action="/application/ecommerce" method="post">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <label for="">Average Session Length:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="f1" name="f1" placeholder="Enter the Average Session Length:" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">Time on App:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="f2" name="f2" placeholder="Enter the Time on App:" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">Time on Website:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="f3" name="f3" placeholder="Enter the Time on Website:" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">Length Of Membership:</label>
+            </div>
+            <div class="col">
+                <input type="text" id="f4" name="f4" placeholder="Enter the Length Of Membership:" required><br>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit" class="bt" value="submit">Predict</button>
+        </div>
+    </form>
+    <div class="card text-center" style="width:21.5em;margin:0 auto;">
+        <div class="card-body">
+          <p class="card text">
+          <h1>{{prediction}}</h1>
+          </p>
+        </div>
+        </div>
+    <h3><marquee behavior="scroll" direction="left" scrollamount=10>This is the Page where you will able to predict the Yearly ammount Spent.</marquee></h3>
+    <a href="/application"><button class="bt36" type="submit">Go Back</button></a>
+</body>
+</html>

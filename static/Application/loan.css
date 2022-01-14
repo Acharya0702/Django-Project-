@@ -1,0 +1,39 @@
+.row{
+    padding: 20px;
+}
+.btn{
+    padding: 15px;
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+    background-color:white;
+    margin-bottom: 40px;
+}
+.col{
+    color: chartreuse; 
+    width: 500px; 
+    height: 30px;
+}
+body{
+background-color:darkblue;
+text-align: center;
+}
+h1{
+font-family: 'Times New Roman', Times, serif; 
+color:blue;
+font-size: 40px;
+background-color: greenyellow;
+}
+.card text-center{
+background-color: black;
+color: chartreuse;
+}
+h5{
+color:white; 
+background-color: red;
+font-size: larger; 
+font-family: Arial, Helvetica, sans-serif;
+}
+.marque{
+    color: aliceblue;
+}

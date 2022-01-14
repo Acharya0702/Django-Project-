@@ -1,0 +1,17 @@
+body{
+    background-image: url(/static/image/3978.jpg);
+}
+.btn{
+    background-color: black;
+    color: aliceblue;
+    font-weight: bolder;
+    text-align: center;
+}
+h1{
+    color: aliceblue;
+}
+h5{
+    padding-top: 300px;
+    padding-bottom: 20px;
+    color: chartreuse;
+}

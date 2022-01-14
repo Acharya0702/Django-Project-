@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/application/app.css">
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade = show" role="alert">
+        <strong>Message: </strong>{{message}}
+        <button type= "button" class="close" data-dismiss="alert" area-lebel = "close">
+        <span area-hidden = "true">&times;</span></button>
+    </div>
+    {% endfor %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="/signout">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Python<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                    role="button" data-toggle="dropdown" aria-haspopup="true" 
+                    aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="iris">Iris Flower Classification Prediction</a>
+                        <a class="dropdown-item" href="diabetes">Diabetes Prediction</a>
+                        <a class="dropdown-item" href="crop">Crop Prediction</a>
+                        <a class="dropdown-item" href="ecommerce">E-commerce Prediction</a>
+                        <a class="dropdown-item" href="car">Car Price Prediction</a>
+                        <a class="dropdown-item" href="loan">loan prediction</a>
+                        <a class="dropdown-item" href="laptop">Laptop Price Prediction</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <h1>Machine-Learning</h1>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    {% if user.is_authenticated %}
+    <h3>Hello, {{fname}} You are successfully logged in</h3>
+    <h5>What is Machine Learning?</h5>
+    <p>Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values.</p>
+    <h5>Why machine-learning is so important?</h5>
+    <p>Machine learning is important because it gives enterprises a view of trends in customer behavior and business operational patterns, as well as supports the development of new products. Many of today's leading companies, such as Facebook, Google and Uber, make machine learning a central part of their operations. Machine learning has become a significant competitive differentiator for many companies.</p>
+    <h5>What are the different types of machine learning?</h5>
+    <p>Classical machine learning is often categorized by how an algorithm learns to become more accurate in its predictions. There are four basic approaches:supervised learning, unsupervised learning, semi-supervised learning and reinforcement learning. The type of algorithm data scientists choose to use depends on what type of data they want to predict.</p>
+    <h5>What are the different types of machine learning?</h5>
+    <p>Classical machine learning is often categorized by how an algorithm learns to become more accurate in its predictions. There are four basic approaches:supervised learning, unsupervised learning, semi-supervised learning and reinforcement learning. The type of algorithm data scientists choose to use depends on what type of data they want to predict.</p>
+    <h5>Supervised learning:</h5>
+    <p>In this type of machine learning, data scientists supply algorithms with labeled training data and define the variables they want the algorithm to assess for correlations. Both the input and the output of the algorithm is specified.</p>
+    <h5>Unsupervised learning:</h5>
+    <p>This type of machine learning involves algorithms that train on unlabeled data. The algorithm scans through data sets looking for any meaningful connection. The data that algorithms train on as well as the predictions or recommendations they output are predetermined.</p>
+    <h5>Semi-supervised learning:</h5>
+    <p> This approach to machine learning involves a mix of the two preceding types. Data scientists may feed an algorithm mostly labeled training data, but the model is free to explore the data on its own and develop its own understanding of the data set.</p>
+    <h5>Reinforcement learning:</h5>
+    <p>Data scientists typically use reinforcement learning to teach a machine to complete a multi-step process for which there are clearly defined rules. Data scientists program an algorithm to complete a task and give it positive or negative cues as it works out how to complete a task. But for the most part, the algorithm decides on its own what steps to take along the way.</p>
+    <b>Info:</b>
+    <pre>
+        This website represents several Machine-Learning models and how they are worked.
+        There are several datasets which are collected from <b>Kaggle</b> and Using Supervised Machine-Learning algorithms we have 
+        analyzed all the datasets and create models having higher accuracy.
+        <b>Datasets are: </b>
+        <i>Iris</i>
+        <i>Diabetes</i>
+        <i>E-commerce</i>
+        more will be added soon...
+        <i>Some Projects names are mentioned these are: </i>
+        <b>Iris Flower Classification Prediction.</b>
+        <b>Diabetes Prediction</b>
+        <b>E-commerce Application</b>
+        Basically among these 3 projects there are 2 classification projects:
+        <b>(1)</b>Iris Flower Classification Prediction.
+        <b>(2)</b>Diabetes Prediction
+        <i><b>and one Regression project:</b></i> 
+        <b>(3)</b>E-commerce Application.
+    </pre>
+    
+    
+    {% else %}
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn"><a href="signup">signup</a></button>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn"><a href="signin">signin</a></button>
+        </div>
+    </div>
+    <b><p>PLease SignUp Here if You are first time visiting this web site. If you already SignedUp then click on SignIn and Proceed.</p></b>
+    {% endif %}
+</body>
+<footer>All rights are Reserved.
+</footer>
+</html>
